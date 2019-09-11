@@ -1,0 +1,36 @@
+<!-- first version -->
+<!--div class="panel panel-primary" id="dropdownVersion"> 
+    <div class="panel-heading" >
+        <h2>Choose your option!</h2>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <select (change)="parseValue($event.target.value)" class="form-control">
+                <option>--select--</option>
+                <option *ngFor="let name of choices"
+                    [value]="name">{{name}}</option>
+            </select>
+        </div>
+        <button class="btn btn-info" (click)="playGame()">Play</button>      
+   </div>
+</div -->
+<!-- preferred version-->
+    <div class="container">
+<div class="panel panel-primary" id="buttonVersion">
+    <div class="panel-heading">
+        <h2>Choose your option!</h2>
+    </div>
+    <div class="panel-body">
+            <div class="row">
+                <div *ngFor="let name of choices"  class="col-sm">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{name}}</h5>
+                            <button (click)="playGameClick(name)" class="btn btn-info">Choose!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
